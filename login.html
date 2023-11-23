@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bookstore</title>
+    <style>
+        /* Reset some default styles for better aesthetics */
+        * {
+            margin: 0;
+            padding: 7px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d7d7d7;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 60px 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Increased shadow */
+            border-radius: 5px;
+            width: 400px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .left-column {
+            flex: 1;
+            text-align: center;
+        }
+
+        .left-column img {
+            height: 300%;
+            width: 110%;
+        }
+
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        .login-container label, .login-container input {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .login-container button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-container button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="left-column">
+            <img src="left_image.jpg" alt="Left Image">
+        </div>
+        <div class="right-column">
+            <h2>Login to</h2><img src="website_logo.png" width="200px" height="70px">
+            <form action="home.html" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

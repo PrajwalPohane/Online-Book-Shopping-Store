@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceed to Checkout - Bookstore</title>
+    <link rel="stylesheet" type="text/css" href="checout_css.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <h1>Proceed to Checkout</h1>
+
+        <input type="text" class="address-input" placeholder="Enter Your Address">
+
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+
+            <!-- Example Cart Items -->
+            <div class="cart-item">
+                <span>Book Title 1</span>
+                <span>$19.99</span>
+            </div>
+
+            <div class="cart-item">
+                <span>Book Title 2</span>
+                <span>$14.99</span>
+            </div>
+
+            <div class="total-price">
+                <span>Total:</span>
+                <span>$34.98</span>
+            </div>
+        </div>
+
+        <button onclick="window.location.href='payment.html';">Place Order</button>
+    </div>
+</body>
+</html>

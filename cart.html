@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Bookstore</title>
+    <link rel="stylesheet" type="text/css" href="cart_css.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+    </header>
+
+    <section class="cart-items">
+        <h2>Shopping Cart</h2>
+        <ul>
+            <li>
+                <img src="book1.jpg" alt="Book 1">
+                <div class="book-info">
+                    <h3>ALLEN-An Alien History Book</h3>
+                    <p>Author: Chein Anen</p>
+                    <p>Description: An Alien history book especially for children.</p>
+                </div>
+                <div class="quantity">
+                    <input type="number" value="1" min="1">
+                </div>
+                <div class="price">
+                    $19.99
+                </div>
+                <div class="remove">
+                    <button class="remove-item" type="button">Remove</button>
+                </div>
+            </li>
+            <li>
+                <img src="book2.jpg" alt="Book 1">
+                <div class="book-info">
+                    <h3></h3>
+                    <p>Author: Chein Anen</p>
+                    <p>Description: An Alien history book especially for children.</p>
+                </div>
+                <div class="quantity">
+                    <input type="number" value="1" min="1">
+                </div>
+                <div class="price">
+                    $19.99
+                </div>
+                <div class="remove">
+                    <button class="remove-item" type="button">Remove</button>
+                </div>
+            </li>
+            <!-- Repeat this list item structure for each book in the cart -->
+        </ul>
+    </section>
+
+    <section class="cart-summary">
+        <h2>Cart Summary</h2>
+        <div class="summary-item">
+            <span>Subtotal:</span>
+            <span>$19.99</span>
+        </div>
+        <div class="summary-item">
+            <span>Shipping:</span>
+            <span>$5.00</span>
+        </div>
+        <div class="summary-item total">
+            <span>Total:</span>
+            <span>$24.99</span>
+        </div>
+    </section>
+
+    <section class="proceed">
+        <button id="continue" onclick="window.location.href='home.html';">Continue Shopping</button>
+        <button id="checkout" onclick="window.location.href='checkout.html';">Proceed to Checkout</button>
+    </section>
+    
+    <script>
+        // Get the cart items and the empty message element
+        const cartItems = document.getElementById('cart-items');
+        const emptyMessage = document.getElementById('cart-empty-message');
+        
+        // Get all the "Remove" buttons
+        const removeButtons = document.querySelectorAll('.remove-item');
+        
+        // Add click event listeners to the "Remove" buttons
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Find the parent list item and remove it
+                const listItem = this.closest('li');
+                if (listItem) {
+                    listItem.remove();
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

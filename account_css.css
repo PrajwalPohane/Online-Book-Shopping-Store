@@ -1,0 +1,157 @@
+/* Reset some default styles for better aesthetics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d7d7d7;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+section {
+    text-align: center;
+    background-color: #fff;
+    padding: 35px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+section.user-actions {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333; /* Background color for the user actions section */
+    color: #fff;
+}
+
+.user-actions button {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-actions button:hover {
+    background-color: #777;
+}
+
+section.my-account {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+section.my-account h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section.search-books {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+section.search-books h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section.search-books form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.search-books input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+section.search-books button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+section.search-books button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    border-top: 2px solid #ddd;
+    color: #777;
+    font-size: 1.2rem;
+}
+
+.account-header {
+    text-align: center; /* Center text contents horizontally */
+}
+
+.account-info {
+    display: inline-block; /* Keep the text centered */
+    text-align: center; /* Align text to the left */
+    margin-left: 20px; /* Add some spacing between the image and text */
+}
+
+
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    height: 8px;
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Background color of the thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+/* Style the scrollbar track when hovered over */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Background color when hovered */
+}
+
+/* Style the scrollbar track piece above and below the thumb */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+}
+
+/* Style the scrollbar track piece above the thumb when hovered over */
+::-webkit-scrollbar-track:hover {
+    background: #ccc; /* Background color when hovered */
+}

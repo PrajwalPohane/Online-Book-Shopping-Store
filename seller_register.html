@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration - Bookstore</title>
+    <style>
+        /* Reset some default styles for better aesthetics */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d7d7d7; /* Background color */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .registration-container {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            width: 600px; /* Adjust width as needed */
+        }
+
+        .registration-form {
+            flex: 1;
+            padding-right: 20px; /* Add spacing between the form and the image */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s; /* Add a transition for smooth hover effect */
+        }
+
+        button:hover {
+            background-color: #555; /* Darken the background color on hover */
+        }
+
+        .registration-image {
+            flex: 1;
+        }
+
+        .registration-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Optional: Add border radius to the image */
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <div class="registration-form">
+            <h1>User Registration</h1>
+            <form id="registrationForm" action="seller_home.html" method="post" onsubmit="return validatePassword()">
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" required>
+                    <span class="password-toggle" onclick="togglePasswordVisibility('password')">&#128065;</span>
+                </div>
+
+                <label for="confirm_password">Confirm Password:</label>
+                <div class="password-container">
+                    <input type="password" id="confirm_password" required>
+                    <span class="password-toggle" onclick="togglePasswordVisibility('confirm_password')">&#128065;</span>
+                </div>
+
+                <label for="businessname">Business Name:</label>
+                <input type="text" id="businessname" name="businessname" required>
+
+                <label for="address">Address:</label>
+                <input type="address" id="address" name="address" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <div class="registration-image">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="seller_registration.jpg" alt="Right Image">
+        </div>
+    </div>
+    <script>
+        function validatePassword() {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm_password').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please re-enter.');
+                return false; // Prevent form submission
+            }
+
+            // If passwords match, allow form submission and redirect to seller_home.html
+            alert('Registration successful! Redirecting to Seller Home.');
+            window.location.href = 'seller_home.html';
+            return true; // Allow form submission
+        }
+
+        function togglePasswordVisibility(inputId) {
+            var passwordInput = document.getElementById(inputId);
+            var passwordToggle = document.querySelector(`[for=${inputId}] .password-toggle`);
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordToggle.innerHTML = '&#128064;'; // Eye open
+            } else {
+                passwordInput.type = 'password';
+                passwordToggle.innerHTML = '&#128065;'; // Eye closed
+            }
+        }
+    </script>
+</body>
+</html>

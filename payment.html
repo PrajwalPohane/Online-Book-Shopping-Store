@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options - Bookstore</title>
+    <link rel="stylesheet" type="text/css" href="payment.css">
+</head>
+<body>
+    <div class="payment-options-container">
+        <h1>Select Payment Option</h1>
+
+        <div class="payment-option">
+            <input type="radio" id="credit" name="paymentMethod" checked>
+            <label for="credit">Credit/Debit Card</label>
+        </div>
+
+        <div class="payment-option">
+            <input type="radio" id="upi" name="paymentMethod">
+            <label for="upi">UPI</label>
+        </div>
+
+        <div class="payment-option">
+            <input type="radio" id="netbanking" name="paymentMethod">
+            <label for="netbanking">Net Banking</label>
+        </div>
+
+        <button id="confirmPaymentBtn">Confirm Payment</button>
+
+        <script>
+            document.getElementById('confirmPaymentBtn').addEventListener('click', function() {
+                // Get the selected payment method
+                var paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').id;
+
+                // Redirect to the corresponding payment method page
+                window.location.href = paymentMethod + '.html';
+            });
+        </script>
+    </div>
+</body>
+</html>
